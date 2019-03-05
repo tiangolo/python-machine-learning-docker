@@ -9,6 +9,6 @@ docker-compose -f docker-compose.build.stage01.yml build
 
 docker-compose -f docker-compose.build.stage01.yml push
 
-# docker-compose -f docker-compose.build.stage02.yml build
+docker-compose -f docker-compose.build.stage02.yml build
 
-# docker-compose -f docker-compose.build.stage02.yml push
+docker-compose -f docker-compose.build.stage02.yml push
