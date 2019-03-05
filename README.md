@@ -112,7 +112,7 @@ COPY ./main.py /app/main.py
 
 All the image tags are tested.
 
-GPU usage is tested locally (as CI system don't provide GPUs easily).
+CUDA (GPU usage) is tested locally (as CI systems don't provide GPUs easily).
 
 To run the tests, you need to have the [`Docker SDK for Python`](https://docker-py.readthedocs.io/en/stable/index.html) installed.
 
@@ -129,10 +129,10 @@ Then you can run the tests locally:
 bash scripts/test.sh
 ```
 
-And you can enable GPU testing while running the tests:
+You can also run the CUDA (GPU) tests:
 
 ```bash
-TEST_GPU=1 bash scripts/test.sh
+bash scripts/test-cuda.sh
 ```
 
 ## Release Notes
