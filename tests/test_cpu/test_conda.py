@@ -1,9 +1,7 @@
-import time
-
 import docker
 import pytest
 
-from ..utils import CONTAINER_NAME, get_logs, remove_previous_container
+from ..utils import CONTAINER_NAME, remove_previous_container
 
 client = docker.from_env()
 

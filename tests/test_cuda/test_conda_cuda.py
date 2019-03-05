@@ -1,9 +1,7 @@
-import time
-
 import docker
 import pytest
 
-from ..utils import CONTAINER_NAME, get_logs, remove_previous_container
+from ..utils import CONTAINER_NAME, remove_previous_container
 
 client = docker.from_env()
 
@@ -11,14 +9,15 @@ client = docker.from_env()
 def verify_container(logs, python_version):
     assert "conda version: conda 4." in logs
     assert f"python version: {python_version}" in logs
-    assert "tensorflow version: " in logs
-    assert "tensorflow compute: " in logs
+    assert "NVIDIA-SMI" in logs
+    assert "GPU Memory" in logs
 
 
 @pytest.mark.parametrize(
     "image,python_version",
     [
-        ("tiangolo/python-machine-learning:conda-python3.6-tensorflow", "3.6"),
+        ("tiangolo/python-machine-learning:conda-cuda9.1-python3.6", "3.6"),
+        ("tiangolo/python-machine-learning:conda-cuda9.1-python3.7", "3.7"),
     ],
 )
 def test_defaults(image, python_version):
