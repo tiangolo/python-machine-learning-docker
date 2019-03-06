@@ -108,6 +108,80 @@ COPY ./main.py /app/main.py
 
 **Note**: As the default command (`CMD`) is to run `/start.sh`, if you provide/overwrite that file, you don't have to add a `CMD /start.sh` in your `Dockerfile`.
 
+## CUDA Technical details
+
+First, to be able to run the CUDA versions with Docker you need to be on Linux, have Docker and an Nvidia GPU.
+
+Then, there are compatibility requirements between versions.
+
+### CUDA, GPU Driver, Nvidia Model
+
+**CUDA** has to be a version that is compatible with the **Nvidia GPU driver**, which is compatible with a **GPU architecture** (a series of specific GPU models). The CUDA versions require Nvidia GPU driver versions "superior to" some driver number (they are backward compatible).
+
+You can see the [compatibility table](https://github.com/NVIDIA/nvidia-docker/wiki/CUDA#requirements) at the **nvidia-docker** site.
+
+### GPU Driver availability in Linux
+
+As of 2019-03-06, the latest Nvidia driver for Linux is `418`, you can check in the [Nvidia Unix Drivers page](https://www.nvidia.com/object/unix.html).
+
+But the latest driver officially available for Ubuntu is `390`, check in the [Ubuntu Nvidia drivers page](https://help.ubuntu.com/community/BinaryDriverHowto/Nvidia).
+
+#### GPU Beta Drivers
+
+There is a more technical option to install beta drivers.
+
+You can [add the PPA (Personal Package Archive) for the user `~graphics-drivers`](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa) and then you can install (as of 2019-03-06) up to version `410`.
+
+### TensorFlow
+
+**TensorFlow** versions are compatible with specific versions of **CUDA**.
+
+There doesn't seem to be a single page specifying which versions of TensorFlow are compatible with which versions of CUDA, apart from the [GitHub releases page](https://github.com/tensorflow/tensorflow/releases).
+
+The latest requirements (including CUDA version) (for the latest version of TensorFlow) can be found at the [GPU support section](https://www.tensorflow.org/install/gpu) in the official docs.
+
+### Conda
+
+**Conda** has TensorFlow pre-compiled (with the optimizations) in specific versions, compiled with specific versions of **CUDA**.
+
+You can install TensorFlow with a specific CUDA version with, e.g.:
+
+```bash
+conda install tensorflow-gpu cudatoolkit=9.0
+```
+
+that will install TensorFlow compiled with GPU support (with CUDA) using a CUDA version of 9.0.
+
+To see the available `cudatoolkit` versions in `conda`, you can run:
+
+```bash
+conda search cudatoolkit
+```
+
+### Current state
+
+As of 2019-03-06, as the latest Nvidia driver officially [available for Ubuntu is `390`](https://help.ubuntu.com/community/BinaryDriverHowto/Nvidia), this limits the [compatible version of CUDA to max `9.1`](https://github.com/NVIDIA/nvidia-docker/wiki/CUDA#requirements) (unless using the beta drivers).
+
+That's why the current CUDA flavor is version `9.1`. Even though there are superior base image versions, but those wouldn't run on an Ubuntu machine unless using the beta drivers (or drivers installed by hand, directly from the Nvidia site).
+
+Then, Conda has `cudatoolkit` available in several versions, the latest are `9.0`, `9.2` and `10.0`. But as the base image is `9.1`, the latest version that is still compatible is `9.0`. That's the version used in the image tag with TensorFlow and CUDA. But as they are backward compatible, it works.
+
+### Decide your versions
+
+**Note**: this will apply when this image has more CUDA versions (tags). As of now, it only describes the process to decide versions and build this image.
+
+First, check what is the architecture of your GPU, then what is the most recent driver you can install (deciding if you want to have beta drivers).
+
+This applies for local development or cloud (if you use a cloud server with GPU).
+
+Then, see what is the latest CUDA version you can have with that driver.
+
+Then you can get the latest tag (version) of this image that is less than or equal to your driver.
+
+Next, find which versions of `cudatoolkit` (CUDA) are available in `conda`. Choose the latest one that is less than or equal to the image you chose.
+
+Then you can install TensorFlow with that `cudatoolkit`.
+
 ## Tests
 
 All the image tags are tested.
