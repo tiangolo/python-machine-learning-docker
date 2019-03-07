@@ -1,8 +1,8 @@
 version: '3'
 services:
-  conda-python3.6-tensorflow:
-    build: ./conda-python3.6-tensorflow
-    image: tiangolo/python-machine-learning:conda-python3.6-tensorflow
-  conda-cuda9.1-python3.6-tensorflow:
-    build: ./conda-cuda9.1-python3.6-tensorflow
-    image: tiangolo/python-machine-learning:conda-cuda9.1-python3.6-tensorflow
+  python3.6-tensorflow:
+    build: ./python3.6-tensorflow
+    image: tiangolo/python-machine-learning:python3.6-tensorflow
+  cuda9.1-python3.6-tensorflow:
+    build: ./cuda9.1-python3.6-tensorflow
+    image: tiangolo/python-machine-learning:cuda9.1-python3.6-tensorflow

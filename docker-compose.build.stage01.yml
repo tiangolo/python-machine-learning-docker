@@ -1,17 +1,17 @@
 version: '3'
 services:
   latest:
-    build: ./conda-python3.7
+    build: ./python3.7
     image: tiangolo/python-machine-learning:latest
-  conda-python3.7:
-    build: ./conda-python3.7
-    image: tiangolo/python-machine-learning:conda-python3.7
-  conda-python3.6:
-    build: ./conda-python3.6
-    image: tiangolo/python-machine-learning:conda-python3.6
-  conda-cuda9.1-python3.7:
-    build: ./conda-cuda9.1-python3.7
-    image: tiangolo/python-machine-learning:conda-cuda9.1-python3.7
-  conda-cuda9.1-python3.6:
-    build: ./conda-cuda9.1-python3.6
-    image: tiangolo/python-machine-learning:conda-cuda9.1-python3.6
+  python3.7:
+    build: ./python3.7
+    image: tiangolo/python-machine-learning:python3.7
+  python3.6:
+    build: ./python3.6
+    image: tiangolo/python-machine-learning:python3.6
+  cuda9.1-python3.7:
+    build: ./cuda9.1-python3.7
+    image: tiangolo/python-machine-learning:cuda9.1-python3.7
+  cuda9.1-python3.6:
+    build: ./cuda9.1-python3.6
+    image: tiangolo/python-machine-learning:cuda9.1-python3.6

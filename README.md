@@ -3,12 +3,12 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`conda-python3.7`, `latest` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/conda-python3.7/Dockerfile)
-* [`conda-python3.6` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/conda-python3.6/Dockerfile)
-* [`conda-cuda9.1-python3.7` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/conda-cuda9.1-python3.7/Dockerfile)
-* [`conda-cuda9.1-python3.6` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/conda-cuda9.1-python3.6/Dockerfile)
-* [`conda-python3.6-tensorflow` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/conda-python3.6-tensorflow/Dockerfile)
-* [`conda-cuda9.1-python3.6-tensorflow` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/conda-cuda9.1-python3.6-tensorflow/Dockerfile)
+* [`python3.7`, `latest` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/python3.7/Dockerfile)
+* [`python3.6` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/python3.6/Dockerfile)
+* [`cuda9.1-python3.7` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/cuda9.1-python3.7/Dockerfile)
+* [`cuda9.1-python3.6` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/cuda9.1-python3.6/Dockerfile)
+* [`python3.6-tensorflow` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/python3.6-tensorflow/Dockerfile)
+* [`cuda9.1-python3.6-tensorflow` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/cuda9.1-python3.6-tensorflow/Dockerfile)
 
 
 # python-machine-learning
@@ -78,7 +78,7 @@ There are also versions with TensorFlow and CUDA. So, you can run TensorFlow (bu
 * You don't need to clone the GitHub repo. You can use this image as a base image for other images, using this in your `Dockerfile`:
 
 ```Dockerfile
-FROM tiangolo/python-machine-learning:conda-python3.7
+FROM tiangolo/python-machine-learning:python3.7
 
 COPY ./main.py /app/main.py
 ```
@@ -86,7 +86,7 @@ COPY ./main.py /app/main.py
 or any of the image variants, e.g.:
 
 ```Dockerfile
-FROM tiangolo/python-machine-learning:conda-cuda9.1-python3.6-tensorflow
+FROM tiangolo/python-machine-learning:cuda9.1-python3.6-tensorflow
 
 COPY ./main.py /app/main.py
 ```
@@ -98,7 +98,7 @@ You can override that behavior and run your own program creating a file at `/sta
 For example:
 
 ```Dockerfile
-FROM tiangolo/python-machine-learning:conda-python3.7
+FROM tiangolo/python-machine-learning:python3.7
 
 COPY ./start.sh /start.sh
 RUN chmod +x /start.sh
