@@ -15,7 +15,7 @@ def verify_container(logs, python_version):
 
 @pytest.mark.parametrize(
     "image,python_version",
-    [("tiangolo/python-machine-learning:conda-python3.6-tensorflow", "3.6")],
+    [("tiangolo/python-machine-learning:python3.6-tensorflow", "3.6")],
 )
 def test_defaults(image, python_version):
     remove_previous_container(client)

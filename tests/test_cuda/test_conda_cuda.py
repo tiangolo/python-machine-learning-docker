@@ -16,8 +16,8 @@ def verify_container(logs, python_version):
 @pytest.mark.parametrize(
     "image,python_version",
     [
-        ("tiangolo/python-machine-learning:conda-cuda9.1-python3.6", "3.6"),
-        ("tiangolo/python-machine-learning:conda-cuda9.1-python3.7", "3.7"),
+        ("tiangolo/python-machine-learning:cuda9.1-python3.6", "3.6"),
+        ("tiangolo/python-machine-learning:cuda9.1-python3.7", "3.7"),
     ],
 )
 def test_defaults(image, python_version):
