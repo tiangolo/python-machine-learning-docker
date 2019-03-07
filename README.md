@@ -211,10 +211,13 @@ bash scripts/test-cuda.sh
 
 ## Release Notes
 
+### 0.2.0
+
+* Refactor image tags, remove `conda-` prefix to all images to simplify. PR <a href="https://github.com/tiangolo/python-machine-learning-docker/pull/1" target="_blank">#1</a>.
+
 ### 0.1.0
 
 * First release, including Conda, Python 3.7, Python 3.6, CUDA and TensorFlow.
-
 
 ## License
 
