@@ -1,4 +1,4 @@
-FROM tiangolo/python-machine-learning:conda-python3.6
+FROM tiangolo/python-machine-learning:python3.6
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 

@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM buildpack-deps:stretch
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
