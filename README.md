@@ -19,6 +19,8 @@ Uses [**Conda**](https://conda.io/en/latest/) (installed with [Miniconda](https:
 
 Includes optional variants with [**Nvidia CUDA**](https://www.geforce.com/hardware/technology/cuda).
 
+And optional variants with [**TensorFlow](https://www.tensorflow.org/).
+
 **GitHub repo**: <https://github.com/tiangolo/python-machine-learning-docker>
 
 **Docker Hub image**: <https://hub.docker.com/r/tiangolo/python-machine-learning>
@@ -210,6 +212,10 @@ bash scripts/test-cuda.sh
 ```
 
 ## Release Notes
+
+### 0.3.0
+
+* All images are now based on `buildpack-deps:latest` (or equivalent) as is the official image for Python. PR <a href="https://github.com/tiangolo/python-machine-learning-docker/pull/2" target="_blank">#2</a>.
 
 ### 0.2.0
 
