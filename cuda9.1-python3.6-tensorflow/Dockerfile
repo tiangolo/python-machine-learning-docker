@@ -1,4 +1,4 @@
-FROM tiangolo/python-machine-learning:conda-cuda9.1-python3.6
+FROM tiangolo/python-machine-learning:cuda9.1-python3.6
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
