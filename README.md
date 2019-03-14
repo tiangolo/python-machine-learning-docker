@@ -9,6 +9,8 @@
 * [`cuda9.1-python3.6` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/cuda9.1-python3.6/Dockerfile)
 * [`python3.6-tensorflow` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/python3.6-tensorflow/Dockerfile)
 * [`cuda9.1-python3.6-tensorflow` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/cuda9.1-python3.6-tensorflow/Dockerfile)
+* [`cuda9.1-devel-python3.6` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/cuda9.1-devel-python3.6/Dockerfile)
+* [`cuda9.1-cudnn7-devel-python3.6` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/cuda9.1-cudnn7-devel-python3.6/Dockerfile)
 
 
 # python-machine-learning
@@ -212,6 +214,12 @@ bash scripts/test-cuda.sh
 ```
 
 ## Release Notes
+
+### Next
+
+* Add cuDNN version, to compile projects like [dlib](http://dlib.net/) that require the CUDA and cuDNN development toolkit. PR <a href="https://github.com/tiangolo/python-machine-learning-docker/pull/4" target="_blank">#4</a>.
+
+* Add CUDA `devel` version, to compile projects like [dlib](http://dlib.net/) that require the CUDA development toolkit. PR <a href="https://github.com/tiangolo/python-machine-learning-docker/pull/3" target="_blank">#3</a>.
 
 ### 0.3.0
 
