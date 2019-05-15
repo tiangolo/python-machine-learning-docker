@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/tiangolo/python-machine-learning-docker.svg?branch=master)](https://travis-ci.org/tiangolo/python-machine-learning-docker)
 
-
 ## Supported tags and respective `Dockerfile` links
 
 * [`python3.7`, `latest` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/python3.7/Dockerfile)
@@ -12,7 +11,6 @@
 * [`cuda9.1-devel-python3.6` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/cuda9.1-devel-python3.6/Dockerfile)
 * [`cuda9.1-cudnn7-devel-python3.6` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/cuda9.1-cudnn7-devel-python3.6/Dockerfile)
 
-
 # python-machine-learning
 
 [**Docker**](https://www.docker.com/) image with **[Python](https://www.python.org/) 3.7** and **3.6** for Machine Learning.
@@ -23,9 +21,9 @@ Includes optional variants with [**Nvidia CUDA**](https://www.geforce.com/hardwa
 
 And optional variants with [**TensorFlow](https://www.tensorflow.org/).
 
-**GitHub repo**: <https://github.com/tiangolo/python-machine-learning-docker>
+**GitHub repo**: [https://github.com/tiangolo/python-machine-learning-docker](https://github.com/tiangolo/python-machine-learning-docker)
 
-**Docker Hub image**: <https://hub.docker.com/r/tiangolo/python-machine-learning>
+**Docker Hub image**: [https://hub.docker.com/r/tiangolo/python-machine-learning](https://hub.docker.com/r/tiangolo/python-machine-learning)
 
 ## Description
 
