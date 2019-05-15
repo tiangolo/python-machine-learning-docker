@@ -215,7 +215,9 @@ bash scripts/test-cuda.sh
 
 ## Release Notes
 
-### Next
+### Next Release
+
+* Upgrade Travis. PR [#5](https://github.com/tiangolo/python-machine-learning-docker/pull/5).
 
 * Add cuDNN version, to compile projects like [dlib](http://dlib.net/) that require the CUDA and cuDNN development toolkit. PR <a href="https://github.com/tiangolo/python-machine-learning-docker/pull/4" target="_blank">#4</a>.
 
