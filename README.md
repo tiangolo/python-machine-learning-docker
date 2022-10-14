@@ -1,5 +1,12 @@
 [![Build Status](https://travis-ci.org/tiangolo/python-machine-learning-docker.svg?branch=master)](https://travis-ci.org/tiangolo/python-machine-learning-docker)
 
+# 🚨 WARNING: Currently not maintained
+
+I'm currently not using this Docker image and I'm currently not having time to maintain it. Some of the source code might be useful for you, but I suspect the installation of each of the components might have varied a bit through time, so you might be better off creating a new `Dockerfile` from scratch.
+
+
+[![Build Status](https://travis-ci.org/tiangolo/python-machine-learning-docker.svg?branch=master)](https://travis-ci.org/tiangolo/python-machine-learning-docker)
+
 ## Supported tags and respective `Dockerfile` links
 
 * [`python3.7`, `latest` _(Dockerfile)_](https://github.com/tiangolo/python-machine-learning-docker/blob/master/python3.7/Dockerfile)
